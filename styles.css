@@ -166,10 +166,11 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin: 1rem;
+  gap:1rem;
 }
 
 .boxes .box {
-  width: 50%;
+  width: 49%;
   box-sizing: border-box;
   list-style-type: none;
   display: flex;
@@ -237,8 +238,4 @@ Hér eru skilgreiningar sem endurnýta má úr v3, með takmörkunum.
   background-color: white;
   border-spacing: 0 2px;
   text-align: center;
-}
-#last-p {
-  padding-left: 5rem;
-  padding-top: 1rem;
 }
