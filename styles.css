@@ -1,3 +1,4 @@
+/* Reset og border-box á allt */
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +7,89 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+.title {
+  border-bottom: 1px solid black;
+  /*padding: 1rem;*/
+}
+@font-face {
+  font-family: "Lora";
+  src: url("fonts/Lora/Lora-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Noto Sans Display";
+  src: url("fonts/Noto_Sans_Display/NotoSansDisplay-VariableFont_wdth\,wght.ttf");
+}
 
+/*Leturgerðir */
+
+/** Hér skal skilgreina leturgerðir **/
+
+/* Stillingar */
+
+:root {
+  /* Grunn bilið okkar er 1rem == 16px */
+  --font-base-body-px: 16px;
+  --spacing: 1rem;
+
+  /* Hámarksbreidd á efni */
+  --max-width: 900px;
+
+  /* Border breiddir */
+  --border-small: 1px;
+  --border-large: 8px;
+  --border-radius: 6px;
+
+  /* Litir */
+  --color-gold: #ffe7ae;
+  --color-gold-light: #fff1cf;
+  --color-dark: #2f0505;
+  --color-light: #fff9ee;
+
+  /* Letur stillingar */
+  --font-base-size: 1rem;
+  --font-family-base: "Noto Sans Display", Helvetica, Arial, sans-serif;
+  --font-family-heading: "Lora", Georgia, serif;
+}
+
+/* Almennt */
+
+/** Skilgreininar sem gilda fyrir allt efni og nota type selectora **/
+
+html,
+input,
+select,
+button {
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lora";
+  font-weight: bold;
+}
+h2 {
+  padding-left: 1rem;
+}
+
+a {
+  color: inherit;
+  background-color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/** Hjálpar class sem felur sjónrænt en skjálesarar lesa **/
 .sr-only:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -21,119 +99,146 @@ html {
   white-space: nowrap;
   width: 1px;
 }
-.nav {
-  padding: 1rem;
-  color: #ffe7ae;
+
+/* Layout */
+
+.wrapper {
+  font-family: "Noto Sans Display";
 }
-.nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-align: center;
-}
-.nav li {
-  margin: 0 8px;
-  display: inline-block;
-}
-.nav a {
-  text-align: center;
-  display: block;
-}
-nav a.virk {
-  font-weight: bold;
-  text-decoration: none;
-}
-body {
-  width: 900px;
-  font-family: "Lora";
-}
-.haus {
+
+/** Haus **/
+
+.header {
   background-color: #2f0505;
   text-align: center;
-  border-bottom: 8px solid #ffe7ae;
+}
+
+.header header {
   color: #ffe7ae;
+}
+
+/** Valmynd **/
+
+.navigation {
+  background-color: #ffe7ae;
+  border-bottom: 8px solid #ffe7ae;
+}
+
+.navigation ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
   padding: 1rem;
+  text-align: center;
+  background-color: #fff9ee;
 }
-.meginmal {
+.navigation li {
+  margin: 0 8px;
+}
+
+/** Meginmál **/
+
+.sagan p {
   margin: 1rem;
-  padding: 2rem 2rem;
 }
-.opnunartimi li {
+.sagan h2 {
+  margin: 1rem;
+}
+
+/** Fótur **/
+
+.footer {
+  background-color: #2f0505;
+  color: #ffe7ae;
+  border-top: 8px solid #ffe7ae;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer ul {
   list-style: none;
 }
-#sagan {
-  width: 100%;
-}
-.box {
-  padding-bottom: 2rem;
+
+/* Box! */
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
   margin: 1rem;
-  text-align: left;
-  display: inline-block;
-  width: 40%;
-  vertical-align: top;
-  position: relative;
 }
-.box img {
-  background-size: 100%;
+
+.boxes .box {
+  width: 50%;
+  box-sizing: border-box;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0rem 1rem;
+  background-color: #ffe7ae;
+  padding: 0.5rem;
+  border: 1px solid red;
 }
-.seperator {
-  border: 1px solid #ffe7ae;
+.inner-box {
+  padding: 0.5rem;
+  /*text-align: center;*/
+  flex: 1;
+  box-sizing: border-box;
 }
-.standAlone {
-  margin-left: 1rem;
-}
-.box h3,
-h2 {
-  /*margin-top: -5rem;*/
-  padding-left: 1rem;
-}
-.box h4 {
-  padding-left: 1rem;
+.boxes dt {
+  font-weight: bold;
   padding-top: 1rem;
 }
-.minnaStafabil p {
-  margin-top: -1em;
+.boxes p {
+  padding-top: 1rem;
 }
-.box p {
-  padding: 1rem;
-  /*margin-top: -1rem;*/
+.boxes p {
+  margin: 0;
+  padding: 0;
 }
-.box ul {
-  list-style: none;
+.boxes a {
 }
-#menu {
+.boxes dd {
+}
+.popular {
+}
+/** Og fleiri selectorar... **/
+
+/* Opnunartími */
+
+/**
+Hér eru skilgreiningar sem endurnýta má úr v3, með takmörkunum.
+**/
+
+/* Matseðill */
+
+/**
+Hér eru skilgreiningar sem endurnýta má úr v3, með takmörkunum.
+**/
+
+/* Pöntunarform */
+
+/**
+Hér eru skilgreiningar sem endurnýta má úr v3, með takmörkunum.
+**/
+.menu {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
-#menu table {
+.menu table {
   border-collapse: collapse;
 }
-#menu tr:nth-child(odd) {
+.menu tr:nth-child(odd) {
   background-color: #ffe7ae;
 }
 
-#menu thead th {
+.menu thead th {
   background-color: white;
   border-spacing: 0 2px;
   text-align: center;
 }
-div#pontun h3 {
-  position: relative;
-}
-footer {
-  padding-top: 1em;
-  background-color: #2f0505;
-  border-top: 8px solid #ffe7ae;
-}
-.fotur {
-  text-align: center;
-  color: #ffe7ae;
-}
-.pontunarSida {
-  border: 1px solid #ffe7ae;
-}
-.pontunarSida h3 {
-  margin-top: -1rem;
-}
-.fotur a {
-  color: #ffe7ae;
+#last-p {
+  padding-left: 5rem;
+  padding-top: 1rem;
 }
