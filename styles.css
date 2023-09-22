@@ -87,6 +87,7 @@ img {
   height: 400px;
   object-fit: cover;
   object-position: top center;
+  padding-top: 1rem;
 }
 
 /** Hjálpar class sem felur sjónrænt en skjálesarar lesa **/
@@ -159,6 +160,9 @@ img {
 .footer ul {
   list-style: none;
 }
+#efni p a {
+  padding: 1rem;
+}
 
 /* Box! */
 
@@ -166,7 +170,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin: 1rem;
-  gap:1rem;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .boxes .box {
@@ -178,7 +183,7 @@ img {
   margin: 1rem 0rem 1rem;
   background-color: #ffe7ae;
   padding: 0.5rem;
-
+  border: 1px solid red;
 }
 .inner-box {
   padding: 0.5rem;
@@ -190,38 +195,11 @@ img {
   font-weight: bold;
   padding-top: 1rem;
 }
-.boxes p {
-  padding-top: 1rem;
-}
+
 .boxes p {
   margin: 0;
   padding: 0;
 }
-.boxes a {
-}
-.boxes dd {
-}
-.popular {
-}
-/** Og fleiri selectorar... **/
-
-/* Opnunartími */
-
-/**
-Hér eru skilgreiningar sem endurnýta má úr v3, með takmörkunum.
-**/
-
-/* Matseðill */
-
-/**
-Hér eru skilgreiningar sem endurnýta má úr v3, með takmörkunum.
-**/
-
-/* Pöntunarform */
-
-/**
-Hér eru skilgreiningar sem endurnýta má úr v3, með takmörkunum.
-**/
 .menu {
   width: 100%;
   display: flex;
@@ -232,6 +210,9 @@ Hér eru skilgreiningar sem endurnýta má úr v3, með takmörkunum.
 }
 .menu tr:nth-child(odd) {
   background-color: #ffe7ae;
+}
+.menu td {
+  padding: 0.5rem;
 }
 
 .menu thead th {
