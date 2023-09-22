@@ -1,170 +1,163 @@
 <!DOCTYPE html>
 <html lang="is">
-  <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <title>Veitingastaðurinn</title>
-    <link rel="stylesheet" href="../styles.css" >
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap"
-      rel="stylesheet"
-    >
-  </head>
-  <body>
-    <div class="haus" id="um-okkur">
-      <h1>Pantanir</h1>
-      Pantaðu borð og mættu til okkar eða pantaðu mat sem við sendum þér eða þú
-      sækir.
+
+<head>
+  <meta charset="utf-8">
+  <title>Pantanir | Veitingastaðurinn</title>
+  <link rel="stylesheet" href="../styles.css">
+  <meta name="description" content="Um Veitingastaðinn, saga og starfsfólk.">
+  <meta property="og:title" content="Veitingastaðurinn">
+  <meta property="og:description" content="Um Veitingastaðinn, saga og starfsfólk.">
+  <meta property="og:image" content="./myndir/sharing.jpg">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <header>
+        <h1>Pantanir</h1>
+        <p>
+          Pantaðu borð og mættu til okkar eða pantaðu mat sem við sendum þér eða
+          þú sækir.
+        </p>
+      </header>
+
+      <p class="sr-only"><a href="#efni">Beint í efni</a></p>
+
+      <nav class="navigation">
+        <ul>
+          <li><a href="../index.html">Forsíða</a></li>
+          <li><a href="./um.html">Um Veitingastaðinn</a></li>
+          <li><a href="./matsedill.html">Matseðill</a></li>
+          <li><strong>Pöntunarsíða</strong></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="nav">
-      <ul>
-        <li><a href="../index.html">Forsíða</a></li>
-        <li><a href="um.html">Um Veitingastaðinn</a></li>
-        <li><a href="matsedill.html">Matseðill</a></li>
-        <li><a href="pontun.html" class="virk">Pöntunarsíða</a></li>
-      </ul>
-    </nav>
-    <div class="meginmal">
-      <div class="box">
-        <div class="pontunarSida">
-          <h3>Panta mat</h3>
-          <form action="/submit" method="post">
-            <p>
-              <label for="dags">Dagsetning:</label>
-              <input type="date" id="dags" name="dags">
-            </p>
-            <p>
-              <label for="fjoldi">Fjöldi:</label>
-              <select id="fjoldi" name="fjoldi">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-            </p>
-            <p>
-              <label for="athugasemd">Athugasemd:</label>
-              <input type="text" id="athugasemd" name="athugasemd">
-            </p>
-          </form>
-        </div>
-      </div>
-      <div class="box">
-        <div class="pontunarSida">
-          <h3>Panta mat</h3>
-          <form action="/submit" method="post">
-            <p>
-              <label for="rettir">Réttir:</label>
-              <select id="rettir" name="rettir">
-                <option value="1">Lasagna</option>
-                <option value="2">Sveppa risotto</option>
-                <option value="3">Ferskt pasta með pestó</option>
-                <option value="4">Falafel með hummus</option>
-                <option value="5">Quesadilla</option>
-              </select>
-            </p>
-            <p>
-              <label for="heimilisfang">Heimilisfang:</label>
-              <input type="text" id="heimilisfang" name="heimilisfang">
-            </p>
-          </form>
-        </div>
-      </div>
-      <div class="box">
-        <div class="pontunarSida">
-          <h3>Þínar upplýsingar</h3>
-          <form action="/submit" method="post">
-            <p>
-              <label for="nafn">Nafn: </label>
-              <input type="text" id="nafn" name="nafn" required >*
-            </p>
-            <p>
-              <label for="netfang">Netfang: </label>
-              <input
-                type="text"
-                id="netfang"
-                name="netfang"
-                placeholder="nafn@len.is"
-                required
-              >*
-            </p>
-            <p>
-              <label for="simanumer">Símanúmer: </label>
-              <input
-                type="text"
-                id="simanumer"
-                name="simanumer"
-                placeholder="5202500"
-                required
-              >*
-            </p>
-          </form>
-        </div>
-      </div>
-      <div class="box">
-        <div class="pontunarSida">
-          <h3>Samþykkja og panta</h3>
-          <form
-            action="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            method="post"
-          >
-            <p>
-              <input
-                type="checkbox"
-                id="samthykkja"
-                name="samthykkja"
-                value="yes"
-              >
-              <label for="samthykkja"
-                >Ég samþykki skilmála Veitingastaðsins</label
-              >
-            </p>
-            <p><input type="submit" value="Staðfesta" ></p>
-          </form>
-        </div>
-      </div>
-      <div class="box">
-        <p><a href="../index.html">Aftur á forsíðu</a></p>
-      </div>
-    </div>
-    <footer>
-      <div class="fotur">
-        <div class="box">
-          <div class="minnaStafabil">
-            <h3>Opnunartími</h3>
-            <h4>Mánudaga til fimmtudaga</h4>
-            <p>09:00–18:00</p>
-            <h4>Föstudaga</h4>
-            <p>10:00–22:00</p>
-            <h4>Laugardaga</h4>
-            <p>11:00–22:00</p>
-            <h4>Sunnudaga</h4>
-            <p>Lokað</p>
+
+    <main class="main" id="efni">
+      <form method="post" action="." class="boxes">
+        <fieldset class="box">
+          <legend>Panta borð</legend>
+          <div>
+            <label for="when">Hvenær viltu koma?</label>
+            <input type="datetime-local" id="when" name="when">
           </div>
-        </div>
-        <div class="box">
-          <h3>Hér erum við</h3>
-          <p>Veitingastaðurinn ehf.</p>
-          <div class="minnaStafabil">
-            <p>Aðalgata 10</p>
-            <p>100 Reykjavík</p>
-            <p>Sími 333-4567</p>
-            <p>
-              <a href="mailto:veitingastadur@example.org"
-                >veitingastadur@example.com</a
-              >
-            </p>
+          <div>
+            <label for="size">Hve mörg?</label>
+            <select id="size">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
           </div>
-        </div>
-      </div>
+          <div>
+            <label for="special">Viltu taka eitthvað fram?</label>
+            <textarea id="special"></textarea>
+          </div>
+        </fieldset>
+        <fieldset class="box">
+          <legend>Panta mat</legend>
+          <div>
+            <label for="food1">Réttur #1</label>
+            <input id="food1" list="foods">
+          </div>
+          <div>
+            <label for="food2">Réttur #2</label>
+            <input id="food2" list="foods">
+          </div>
+          <div>
+            <label for="food3">Réttur #3</label>
+            <input id="food3" list="foods">
+          </div>
+          <div>
+            <label for="food4">Réttur #4</label>
+            <input id="food4" list="foods">
+          </div>
+          <div>
+            <label for="food5">Réttur #5</label>
+            <input id="food5" list="foods">
+          </div>
+          <div>
+            <label for="address">Heimilisfang</label>
+            <input type="text" id="address">
+          </div>
+        </fieldset>
+
+        <fieldset class="box">
+          <legend>Þínar upplýsingar</legend>
+          <div>
+            <label for="name">Nafn</label>
+            <input id="name" type="text" required>
+          </div>
+          <div>
+            <label for="email">Netfang</label>
+            <input id="email" name="email" type="email" required placeholder="nafn@example.org">
+          </div>
+          <div>
+            <label for="phone">Sími</label>
+            <input id="phone" type="tel" required placeholder="345-6789">
+          </div>
+        </fieldset>
+        <fieldset class="box">
+          <legend>Samþykkja og panta</legend>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="terms"><span>Ég samþykki skilmála
+                Veitingastaðsins</span></label>
+          </div>
+          <button>Panta</button>
+        </fieldset>
+        <datalist id="foods">
+          <option>Lasagna</option>
+          <option>Sveppa risotto</option>
+          <option>Ferskt pasta</option>
+          <option>Quesadilla</option>
+          <option>Falafel með</option>
+          <option>Súpa dagsins</option>
+          <option>Kryddaðar sætkartöflur</option>
+          <option>Hamborgari</option>
+          <option>Pizza</option>
+        </datalist>
+      </form>
+      <p><a href="../index.html">Aftur á forsíðu</a>.</p>
+    </main>
+
+    <footer class="footer">
+      <section>
+        <h2>Opnunartími</h2>
+        <dl>
+          <dt>Mánudaga til fimmtudaga</dt>
+          <dd>09:00–18:00</dd>
+          <dt>Föstudaga</dt>
+          <dd>10:00–22:00</dd>
+          <dt>Laugardaga</dt>
+          <dd>11:00–22:00</dd>
+          <dt>Sunnudaga</dt>
+          <dd>Lokað</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Hér erum við</h2>
+        <ul>
+          <li>Veitingastaðurinn ehf.</li>
+          <li>Aðalgata 10</li>
+          <li>100 Reykjavík</li>
+          <li><a href="tel:3334567">Sími 333-4567</a></li>
+          <li>
+            <a href="mailto:veitingastadur@example.org">veitingastadur@example.org</a>
+          </li>
+        </ul>
+      </section>
     </footer>
-  </body>
+  </div>
+</body>
+
 </html>
